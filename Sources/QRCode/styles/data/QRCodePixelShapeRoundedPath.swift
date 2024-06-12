@@ -329,7 +329,7 @@ private extension QRCode.PixelShape.RoundedPath {
 private extension QRCode.PixelShape.RoundedPath {
 	private func templateRoundTopLeft() -> CGPath {
 		let tlPath = CGMutablePath()
-		let fr = innerRadius * cornerRadiusFraction
+		let fr = actualRadius
 		tlPath.move(to: CGPoint(x: fr, y: 0))
 		tlPath.line(to: CGPoint(x: 0, y: 0))
 		tlPath.curve(to: CGPoint(x: 0, y: fr), controlPoint1: CGPoint(x: 0, y: 0), controlPoint2: CGPoint(x: 0, y: fr / 2))
